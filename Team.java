@@ -6,12 +6,15 @@ class Team{
   private boolean player;
   
   Team(boolean player){
-  this.player=player;
+    this.player=player;
   }
   
   public void addFighter(Fighter fighter){
     if(team.size()<3){
-      team.add(player);
+      team.add(fighter);
+    }
+    else if(team.size()>3){
+      System.out.println("Your team is full");
     }
   }
 }
