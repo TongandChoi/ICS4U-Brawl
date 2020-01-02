@@ -5,13 +5,57 @@ class MoveList{
   private Move pianoFlex;
   private Move slacking;
   private Move hatToss;
+  private Move tower;
+  private Move block;
+  private Move curryToss;
+  private Move kaiAttack;
+  private Move hearthStone;
+  private Move brainBoost;
+  private Move riceProp;
+  private Move bowlCut;
+  private Move hacking;
+  private Move haxball;
+  private Move procrasinate;
+  private Move brawl;
+  private Move cancelHops;
+  private Move roast;
+  private Move snipe;
+  private Move hairFlick;
+  private Move armWrestle;
+  private Move pokerResearch;
+  private Move confiscated;
+  private Move skipLegs;
+  private Move maxOut;
+  private Move preWorkout;
+  private Move ranOver;
+  private Move cheesed;
+  private Move doneNo;
+  private Move drive;
+  private Move sockeyKick;
+  private Move hug;
+  private Move guitarSmash;
+  private Move outsmart;
+  private Move grab;
+  private Move explosion;
+  private Move serenade;
+  
   MoveList(){
+    brawl= new Move("Brawl", 85, false, 10);
+    brawl.set_modifyType("");
+    brawl.set_modifyDegree(1);
+    brawl.set_modifyDegree(1);
+    brawl.set_regen(" ");
+    brawl.set_asleep(false);
+    brawl.set_accuracy(1);
+    
+    
     buzzcut = new Move("Buzzcut", 0, true, 10);
     buzzcut.set_modifyType("attackspeed");
     buzzcut.set_modifyDegree(2);
     buzzcut.set_modifyDegree(3);
     buzzcut.set_regen("no");
     buzzcut.set_asleep(false);
+    buzzcut.set_accuracy(1);
     
     rockClimb = new Move("Rock Climbing", 80, true, 10);
     rockClimb.set_modifyType("attackspeed");
@@ -19,6 +63,7 @@ class MoveList{
     rockClimb.set_modifyDegree(3);
     rockClimb.set_regen(" ");
     rockClimb.set_asleep(false);
+    rockClimb.set_accuracy(0.9);
     
     pianoFlex = new Move("Piano Flex", 60, true, 10);
     pianoFlex.set_modifyType("attack");
@@ -26,6 +71,7 @@ class MoveList{
     pianoFlex.set_modifyDegree(1);
     pianoFlex.set_regen(" ");
     pianoFlex.set_asleep(false);
+    pianoFlex.set_accuracy(1);
     
     slacking = new Move("Slacking", 0, false, 10);
     slacking.set_modifyType(" ");
@@ -33,6 +79,7 @@ class MoveList{
     slacking.set_modifyDegree(1);
     slacking.set_regen("yes");
     slacking.set_asleep(true);
+    slacking.set_accuracy(1);
     
     hatToss = new Move("Hat Toss", 75, false, 10);
     hatToss.set_modifyType(" ");
@@ -40,6 +87,7 @@ class MoveList{
     hatToss.set_modifyDegree(1);
     hatToss.set_regen(" ");
     hatToss.set_asleep(false);
+    hatToss.set_accuracy(1);
     
     vaping = new Move("Vaping", 0, true, 10);
     vaping.set_modifyType("attackdefense");
@@ -47,7 +95,255 @@ class MoveList{
     vaping.set_modifyDegree(2);
     vaping.set_regen(" ");
     vaping.set_asleep(false);
+    vaping.set_accuracy(1);
     
+    tower = new Move("Tower", 0, true, 10);
+    tower.set_modifyType("attackdefense");
+    tower.set_modifyDegree(2);
+    tower.set_modifyDegree(2);
+    tower.set_regen(" ");
+    tower.set_asleep(false);
+    tower.set_accuracy(0.75);
+    
+    explosion = new Move("Explosion", 250, false, 100);
+    explosion.set_modifyType(" ");
+    explosion.set_modifyDegree(1);
+    explosion.set_modifyDegree(1);
+    explosion.set_regen(" ");
+    explosion.set_asleep(false);
+    explosion.set_accuracy(1);
+    
+    block = new Move("Block", 80, true, 10);
+    block.set_modifyType("attack");
+    block.set_modifyDegree(1.25);
+    block.set_modifyDegree(1);
+    block.set_regen(" ");
+    block.set_asleep(false);
+    block.set_accuracy(0.9);
+    
+    kaiAttack = new Move("Kai-Attack", 100, false, 10);
+    kaiAttack.set_modifyType(" ");
+    kaiAttack.set_modifyDegree(1);
+    kaiAttack.set_modifyDegree(1);
+    kaiAttack.set_regen(" ");
+    kaiAttack.set_asleep(false);
+    kaiAttack.set_accuracy(0.9);
+    
+    hearthStone = new Move("Hearthstone", 0, true, 10);
+    hearthStone.set_modifyType("attack");
+    hearthStone.set_modifyDegree(3);
+    hearthStone.set_modifyDegree(1);
+    hearthStone.set_regen(" ");
+    hearthStone.set_asleep(true);
+    hearthStone.set_accuracy(1);
+    
+    brainBoost= new Move("Brain Boost", 0, true, 10);
+    brainBoost.set_modifyType("attackdefense");
+    brainBoost.set_modifyDegree(2);
+    brainBoost.set_modifyDegree(0.75);
+    brainBoost.set_regen(" ");
+    brainBoost.set_asleep(false);
+    brainBoost.set_accuracy(1);
+    
+    hacking = new Move("Hacking", 100, false, 10);
+    hacking.set_modifyType(" ");
+    hacking.set_modifyDegree(1);
+    hacking.set_modifyDegree(1);
+    hacking.set_regen(" ");
+    hacking.set_asleep(false);
+    hacking.set_accuracy(0.9);
+    
+    riceProp = new Move("Rice Prop", 80, true, 10);
+    riceProp.set_modifyType("attack");
+    riceProp.set_modifyDegree(3);
+    riceProp.set_modifyDegree(1);
+    riceProp.set_regen(" ");
+    riceProp.set_asleep(false);
+    riceProp.set_accuracy(1);
+    
+    bowlCut = new Move("Bowlcut", 0, true, 10);
+    bowlCut.set_modifyType("defense");
+    bowlCut.set_modifyDegree(2);
+    bowlCut.set_modifyDegree(1);
+    bowlCut.set_regen(" ");
+    bowlCut.set_asleep(false);
+    bowlCut.set_accuracy(1);
+    
+    haxball = new Move("HaxBall", 95, false, 10);
+    haxball.set_modifyType(" ");
+    haxball.set_modifyDegree(1);
+    haxball.set_modifyDegree(1);
+    haxball.set_regen(" ");
+    haxball.set_asleep(false);
+    haxball.set_accuracy(1);
+    
+    procrasinate= new Move("Procrasinate", 0, true, 10);
+    procrasinate.set_modifyType("attackspeed");
+    procrasinate.set_modifyDegree(0.75);
+    procrasinate.set_modifyDegree(1.5);
+    procrasinate.set_regen(" ");
+    procrasinate.set_asleep(false);
+    procrasinate.set_accuracy(1);
+    
+    cancelHops = new Move("Cancel Hops", 0, true, 10);
+    cancelHops.set_modifyType("attackspeed");
+    cancelHops.set_modifyDegree(4);
+    cancelHops.set_modifyDegree(0.6);
+    cancelHops.set_regen(" ");
+    cancelHops.set_asleep(false);
+    cancelHops.set_accuracy(1);
+    
+    roast = new Move("Roast", 75, true, 5);
+    roast.set_modifyType("attack");
+    roast.set_modifyDegree(3);
+    roast.set_modifyDegree(1);
+    roast.set_regen(" ");
+    roast.set_asleep(false);
+    roast.set_accuracy(0.75);
+    
+    snipe = new Move("Snipe", 130, false, 3);
+    snipe.set_modifyType(" ");
+    snipe.set_modifyDegree(1);
+    snipe.set_modifyDegree(1);
+    snipe.set_regen(" ");
+    snipe.set_asleep(false);
+    snipe.set_accuracy(1);
+    
+    hairFlick = new Move("Hair Flick", 85, true, 10);
+    hairFlick.set_modifyType("defense");
+    hairFlick.set_modifyDegree(2);
+    hairFlick.set_modifyDegree(1);
+    hairFlick.set_regen(" ");
+    hairFlick.set_asleep(false);
+    hairFlick.set_accuracy(0.85);
+    
+    armWrestle = new Move("Arm Wrestle", 100, false, 8);
+    armWrestle.set_modifyType(" ");
+    armWrestle.set_modifyDegree(1);
+    armWrestle.set_modifyDegree(1);
+    armWrestle.set_regen(" ");
+    armWrestle.set_asleep(false);
+    armWrestle.set_accuracy(0.9);
+    
+    pokerResearch = new Move("Poker Research", 0, true, 10);
+    pokerResearch.set_modifyType("attackdefense");
+    pokerResearch.set_modifyDegree(2);
+    pokerResearch.set_modifyDegree(0.5);
+    pokerResearch.set_regen(" ");
+    pokerResearch.set_asleep(false);
+    pokerResearch.set_accuracy(1);
+    
+    confiscated= new Move("Confiscated", 0, true, 10);
+    confiscated.set_modifyType("defenseattack");
+    confiscated.set_modifyDegree(0.4);
+    confiscated.set_modifyDegree(2);
+    confiscated.set_regen(" ");
+    confiscated.set_asleep(false);
+    confiscated.set_accuracy(1);
+     
+    skipLegs= new Move("Skip Legs", 0, true, 10);
+    skipLegs.set_modifyType("attackdefense");
+    skipLegs.set_modifyDegree(3);
+    skipLegs.set_modifyDegree(0.75);
+    skipLegs.set_regen(" ");
+    skipLegs.set_asleep(false);
+    skipLegs.set_accuracy(1);
+    
+    maxOut = new Move("Max Out", 160, false, 5);
+    maxOut.set_modifyType("attack");
+    maxOut.set_modifyDegree(0.75);
+    maxOut.set_modifyDegree(1);
+    maxOut.set_regen(" ");
+    maxOut.set_asleep(false);
+    maxOut.set_accuracy(0.9);
+    
+    preWorkout= new Move("PreWorkout", 0, true, 2);
+    preWorkout.set_modifyType("attackdefense");
+    preWorkout.set_modifyDegree(3);
+    preWorkout.set_modifyDegree(3);
+    preWorkout.set_regen(" ");
+    preWorkout.set_asleep(false);
+    preWorkout.set_accuracy(1);
+    
+    cheesed = new Move("Cheesed", 0, true, 10);
+    cheesed.set_modifyType("attackdefense");
+    cheesed.set_modifyDegree(2);
+    cheesed.set_modifyDegree(0.5);
+    cheesed.set_regen(" ");
+    cheesed.set_asleep(false);
+    cheesed.set_accuracy(1);
+    
+    drive = new Move("Drive", 0, true, 4);
+    drive.set_modifyType("speedattack");
+    drive.set_modifyDegree(2);
+    drive.set_modifyDegree(2);
+    drive.set_regen(" ");
+    drive.set_asleep(false);
+    drive.set_accuracy(1);
+    
+    doneNo= new Move("Done No", 95, false, 10);
+    doneNo.set_modifyType(" ");
+    doneNo.set_modifyDegree(1);
+    doneNo.set_modifyDegree(1);
+    doneNo.set_regen(" ");
+    doneNo.set_asleep(false);
+    doneNo.set_accuracy(1);
+    
+    sockeyKick= new Move("Socky Kick", 90, false, 10);
+    sockeyKick.set_modifyType(" ");
+    sockeyKick.set_modifyDegree(1);
+    sockeyKick.set_modifyDegree(1);
+    sockeyKick.set_regen(" ");
+    sockeyKick.set_asleep(false);
+    sockeyKick.set_accuracy(0.95);
+    
+    hug= new Move("Hug", 100, true, 10);
+    hug.set_modifyType("attack");
+    hug.set_modifyDegree(1.5);
+    hug.set_modifyDegree(1);
+    hug.set_regen(" ");
+    hug.set_asleep(false);
+    hug.set_accuracy(0.9);
+   
+    guitarSmash = new Move("Guitar Smash", 95, false, 10);
+    guitarSmash.set_modifyType(" ");
+    guitarSmash.set_modifyDegree(1);
+    guitarSmash.set_modifyDegree(1);
+    guitarSmash.set_regen(" ");
+    guitarSmash.set_asleep(false);
+    guitarSmash.set_accuracy(1);
+    
+    serenade = new Move("Serenade", 00, true, 10);
+    serenade.set_modifyType("attack");
+    serenade.set_modifyDegree(2);
+    serenade.set_modifyDegree(1);
+    serenade.set_regen(" ");
+    serenade.set_asleep(false);
+    serenade.set_accuracy(1);
+    
+    outsmart= new Move("Outsmart", 100, true, 6);
+    outsmart.set_modifyType("attackspeed");
+    outsmart.set_modifyDegree(2);
+    outsmart.set_modifyDegree(2);
+    outsmart.set_regen(" ");
+    outsmart.set_asleep(false);
+    outsmart.set_accuracy(0.75);
+    
+    grab = new Move("Grab", 80, false, 10);
+    grab.set_modifyType(" ");
+    grab.set_modifyDegree(1);
+    grab.set_modifyDegree(1);
+    grab.set_regen(" ");
+    grab.set_asleep(false);
+    grab.set_accuracy(0.9);
+    
+    procrasinate = new Move("Procrasinate", 0, true, 6);
+    procrasinate.set_modifyType("attackspeed");
+    procrasinate.set_modifyDegree(0.5);
+    procrasinate.set_modifyDegree(2);
+    procrasinate.set_regen(" ");
+    procrasinate.set_asleep(false);
+    procrasinate.set_accuracy(0.9);
     
   }
   
@@ -75,4 +371,131 @@ class MoveList{
     return rockClimb;
   }
   
+  public Move get_procrasinate(){
+    return procrasinate;
+  }
+  
+  public Move get_grab(){
+    return grab;
+  }
+  
+  public Move get_outsmart(){
+    return outsmart;
+  }
+  
+  public Move get_guitarSmash(){
+    return guitarSmash;
+  }
+  
+  public Move get_explosion(){
+    return explosion;
+  }
+  
+  public Move get_brawl(){
+    return brawl;
+  }
+  
+  public Move get_haxball(){
+    return haxball;
+  }
+  
+  public Move get_tower(){
+    return tower;
+  }
+  
+  public Move get_block(){
+    return block;
+  }
+  
+  public Move get_curryToss(){
+    return curryToss;
+  }
+  
+  public Move get_kaiAttack(){
+    return kaiAttack;
+  }
+  
+  public Move get_riceProp(){
+    return riceProp;
+  }
+  
+  public Move get_hearthStone(){
+    return hearthStone;
+  }
+  
+  public Move get_hacking(){
+    return hacking;
+  }
+  
+  public Move get_drive(){
+    return drive;
+  }
+  
+  public Move get_confiscated(){
+    return confiscated;
+  }
+  
+  public Move get_ranOver(){
+    return ranOver;
+  }
+  
+  public Move get_sockeyKick(){
+    return sockeyKick;
+  }
+  
+  public Move get_maxOut(){
+    return maxOut;
+  }
+  
+  public Move get_hug(){
+    return hug;
+  }
+  
+  public Move get_hairFlick(){
+    return hairFlick;
+  }
+  
+  public Move get_cancelHops(){
+    return cancelHops;
+  }
+  
+  public Move get_armWrestle(){
+    return armWrestle;
+  }
+  
+  public Move get_pokerResearch(){
+    return pokerResearch;
+  }
+  
+  public Move get_skipLegs(){
+    return skipLegs;
+  }
+  
+  public Move get_preWorkout(){
+    return preWorkout;
+  }
+  
+  public Move get_cheesed(){
+    return cheesed;
+  }
+  
+  public Move get_snipe(){
+    return snipe;
+  }
+  
+  public Move get_roast(){
+    return roast;
+  }
+  
+  public Move get_bowlCut(){
+    return bowlCut;
+  }
+
+  public Move get_doneNo(){
+    return doneNo;
+  }
+  
+  public Move get_serenade(){
+    return serenade;
+  }
 }
