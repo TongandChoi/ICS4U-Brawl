@@ -10,9 +10,13 @@ class Fighter{
   private double health;
   ArrayList<Move> moveSet = new ArrayList<Move>();
   
-  Fighter(String name, String type){
+  Fighter(String name, String type, double health, double attack, double defense, double speed){
     this.name=name;
     this.type=type;
+    this.health = health;
+    this.attack = attack;
+    this.defense = defense;
+    this.speed = speed;
   }
   
   public void set_attack(double attack){
