@@ -1,0 +1,10 @@
+class MoveList{
+  public static void main(String[] args){
+  Move buzzcut = new Move("Buzzcut", 0, true, 10);
+  buzzcut.set_modifyType("attackspeed");
+  buzzcut.set_modifyDegree(2);
+  buzzcut.set_modifyDegree(3);
+  buzzcut.set_regen("no");
+  }
+}
+  
