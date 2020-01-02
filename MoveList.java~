@@ -1,10 +1,78 @@
 class MoveList{
-  public static void main(String[] args){
-  Move buzzcut = new Move("Buzzcut", 0, true, 10);
-  buzzcut.set_modifyType("attackspeed");
-  buzzcut.set_modifyDegree(2);
-  buzzcut.set_modifyDegree(3);
-  buzzcut.set_regen("no");
+  private Move buzzcut;
+  private Move vaping;
+  private Move rockClimb;
+  private Move pianoFlex;
+  private Move slacking;
+  private Move hatToss;
+  MoveList(){
+    buzzcut = new Move("Buzzcut", 0, true, 10);
+    buzzcut.set_modifyType("attackspeed");
+    buzzcut.set_modifyDegree(2);
+    buzzcut.set_modifyDegree(3);
+    buzzcut.set_regen("no");
+    buzzcut.set_asleep(false);
+    
+    rockClimb = new Move("Rock Climbing", 80, true, 10);
+    rockClimb.set_modifyType("attackspeed");
+    rockClimb.set_modifyDegree(1.5);
+    rockClimb.set_modifyDegree(3);
+    rockClimb.set_regen(" ");
+    rockClimb.set_asleep(false);
+    
+    pianoFlex = new Move("Piano Flex", 60, true, 10);
+    pianoFlex.set_modifyType("attack");
+    pianoFlex.set_modifyDegree(2);
+    pianoFlex.set_modifyDegree(1);
+    pianoFlex.set_regen(" ");
+    pianoFlex.set_asleep(false);
+    
+    slacking = new Move("Slacking", 0, false, 10);
+    slacking.set_modifyType(" ");
+    slacking.set_modifyDegree(1);
+    slacking.set_modifyDegree(1);
+    slacking.set_regen("yes");
+    slacking.set_asleep(true);
+    
+    hatToss = new Move("Hat Toss", 75, false, 10);
+    hatToss.set_modifyType(" ");
+    hatToss.set_modifyDegree(1);
+    hatToss.set_modifyDegree(1);
+    hatToss.set_regen(" ");
+    hatToss.set_asleep(false);
+    
+    vaping = new Move("Vaping", 0, true, 10);
+    vaping.set_modifyType("attackdefense");
+    vaping.set_modifyDegree(0.75);
+    vaping.set_modifyDegree(2);
+    vaping.set_regen(" ");
+    vaping.set_asleep(false);
+    
+    
   }
-}
   
+  public Move get_buzzcut(){
+    return buzzcut;
+  }
+  
+  public Move get_slacking(){
+    return slacking;
+  }
+  
+  public Move get_vaping(){
+    return vaping;
+  }
+  
+  public Move get_pianoFlex(){
+    return pianoFlex;
+  }
+  
+  public Move get_hatToss(){
+    return hatToss;
+  }
+  
+  public Move get_rockClimb(){
+    return rockClimb;
+  }
+  
+}
