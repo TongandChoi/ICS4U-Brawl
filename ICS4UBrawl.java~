@@ -1,9 +1,112 @@
+import java.io.*;
+import java.util.*;
+
+
 class ICS4UBrawl{
   public static void main(String[] args){
-    Fighter testSubject = new Fighter("Aden Choi" , "Strength");
-    Move swear  = new Move("Swear", 100.0, false, 5);
-    testSubject.addMove(swear);
-    System.out.println(testSubject.get_name() + " uses " + testSubject.get_moveSet().get(0).get_name());
-    System.out.println("It dealt " + swear.get_basePower());
+    Team computer = new Team(false);
+    Team player = new Team(true);
+    boolean turn = true;
+    ArrayList<Fighter> draftBoard = new ArrayList<Fighter>();
+    Scanner input = new Scanner(System.in);
+    Fighter currentFighterPlayer = new Fighter("Temp", "Temp");
+    Fighter currentFighterAi = new Fighter("Temp", "Temp");
+    FighterList fighterList = new FighterList();
+    
+    draftBoard.add(fighterList.get_rohit());
+    draftBoard.add(fighterList.get_jason());
+    draftBoard.add(fighterList.get_arman());
+    draftBoard.add(fighterList.get_sadiq());
+    draftBoard.add(fighterList.get_chung());
+    draftBoard.add(fighterList.get_kai());
+    draftBoard.add(fighterList.get_kai_xiang());
+    draftBoard.add(fighterList.get_mahyar());
+    draftBoard.add(fighterList.get_ethan());
+    draftBoard.add(fighterList.get_frank());
+    draftBoard.add(fighterList.get_tobe());
+    draftBoard.add(fighterList.get_sean());
+    draftBoard.add(fighterList.get_wilson());
+    draftBoard.add(fighterList.get_chu());
+      
+    
+    for(int i=0; i<draftBoard.size(); i++){
+      System.out.println(draftBoard.get(i));
+      System.out.println();
+    }
+    
+    while(draftBoard.size()>0){
+      if(turn==player.get_player()){
+        System.out.println("Which fighter do you want on your team");
+        String answer = input.nextLine();
+        for(int i=0; i<draftBoard.size(); i++){
+          if(answer.equalsIgnoreCase(draftBoard.get(i).get_name())){
+            player.addFighter(draftBoard.get(i));
+            draftBoard.remove(i);
+            draftBoard.trimToSize();
+          }
+        }
+        turn=false;
+      }
+      else if(turn==computer.get_player()){
+        computer.addFighter(draftBoard.get(0));
+        draftBoard.remove(0);
+        draftBoard.trimToSize();
+        turn=true;
+      }
+    }
+    System.out.println("Which fighter do you want to use?");
+    String fighterName=input.nextLine();
+    for(int i=0; i<player.get_team().size(); i++){
+      if(fighterName.equalsIgnoreCase(player.get_team().get(i).get_name())){
+        currentFighterPlayer=player.get_team().get(i);
+      }
+    }
+    currentFighterAi=computer.get_team().get(0);  
+    
+    while(computer.get_team().size()>0 && player.get_team().size()>0){
+      if(turn==player.get_player()){
+        System.out.println("Which move do you want to use");
+        String answer = input.nextLine();
+        for(int i=0; i<currentFighterPlayer.get_moveSet().size(); i++){
+          if(answer.equalsIgnoreCase(currentFighterPlayer.get_moveSet().get(i).get_name())){
+            Move tempMove = currentFighterPlayer.get_moveSet().get(i);
+            tempMove.modify(currentFighterPlayer);
+            attacking(currentFighterPlayer, currentFighterAi, tempMove); 
+          }
+        }
+        turn=false;
+      }
+      else if(turn==computer.get_player()){
+        Move tempMove = currentFighterAi.get_moveSet().get(0);
+        tempMove.modify(currentFighterAi);
+        attacking(currentFighterAi, currentFighterPlayer, tempMove); 
+        turn=true;
+      }
+    }
   }
+  public static void attacking(Fighter offense, Fighter defense, Move move){
+    double damage=(2*85 + 10/250 * offense.get_attack()/defense.get_defense()*move.get_basePower()+2);
+    move.set_powerPoints(move.get_powerPoints()-1);
+    
+    if(offense.get_type().equalsIgnoreCase("Brain") && defense.get_type().equalsIgnoreCase("Strength")){
+      damage=damage*2;
+    }
+    else if(offense.get_type().equalsIgnoreCase("Strength") && defense.get_type().equalsIgnoreCase("speed")){
+      damage=damage*2;
+    }
+    else if(offense.get_type().equalsIgnoreCase("speed") && defense.get_type().equalsIgnoreCase("brain")){
+      damage=damage*2;
+    }
+    else if(offense.get_type().equalsIgnoreCase("Strength") && defense.get_type().equalsIgnoreCase("brain")){
+      damage=damage*0.5;
+    }
+    else if(offense.get_type().equalsIgnoreCase("brain") && defense.get_type().equalsIgnoreCase("speed")){
+      damage=damage*0.5;
+    }
+    else if(offense.get_type().equalsIgnoreCase("speed") && defense.get_type().equalsIgnoreCase("strength")){
+      damage=damage*0.5;
+    }
+    defense.set_health(defense.get_health()-damage);
+  }
+  
 }
