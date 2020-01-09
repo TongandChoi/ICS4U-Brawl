@@ -101,28 +101,17 @@ class Move{
     if(modifiers==true){
       if(modifyType.contains("attack")==true){
         fighter.set_attack(fighter.get_attack()*modifyDegree);
-        for(int i=0; i<modifyType.length(); i++){
-          if(modifyType.substring(i,i+1)=="a" && i<modifyType.length()-1){
-            modifyType=modifyType.substring(i);
-          }
-        }
+        modifyType=modifyType.substring(1);
       } 
       else if(modifyType.contains("defense")==true){
         fighter.set_defense(fighter.get_defense()*modifyDegree);
-        for(int i=0; i<modifyType.length(); i++){
-          if(modifyType.substring(i,i+1)=="d" && i<modifyType.length()-1){
-            modifyType=modifyType.substring(i);
-          }
-        }
+        modifyType=modifyType.substring(1);
       }
       else if(modifyType.contains("speed")==true){
         fighter.set_speed(fighter.get_speed()*modifyDegree);
-        for(int i=0; i<modifyType.length(); i++){
-          if(modifyType.substring(i,i+1)=="a" && i<modifyType.length()-1){
-            modifyType=modifyType.substring(i);
-          }
-        }
+        modifyType=modifyType.substring(1);
       }
+      
       if(modifyType.contains("attack")==true){
         fighter.set_attack(fighter.get_attack()*modifyDegreeTwo);
       } 
@@ -134,6 +123,53 @@ class Move{
       }
     }
   }
+  public String toString(){
+    String tempModType=modifyType;
+    String returnString="Move Name: " + name;
+    returnString+="\nBase Power: " + basePower;
+    returnString+="\nPower Points: " + powerPoints;
+    if(modifiers==true){
+      returnString+="\nModifies ";
+      if(tempModType.contains("attack")){
+        returnString+="attack by a factor of " + modifyDegree;
+        tempModType=tempModType.substring(1);
+      }
+      else if(tempModType.contains("defense")){
+        returnString+="defense by a factor of " + modifyDegree;
+        tempModType=tempModType.substring(1);
+      }
+      else if(tempModType.contains("speed")){
+        returnString+="speed by a factor of " + modifyDegree;
+        tempModType=tempModType.substring(1);
+      }
+      if(tempModType.contains("attack")){
+        returnString+="\nModifiesattack by a factor of " + modifyDegreeTwo;
+      }
+      else if(tempModType.contains("defense")){
+        returnString+="\nModifies defense by a factor of " + modifyDegreeTwo;
+      }
+      else if(tempModType.contains("speed")){
+        returnString+="\nModifies speed by a factor of " + modifyDegreeTwo;
+      }
+    }
+    
+    if(regen.equalsIgnoreCase("yes")){
+      returnString+="\nFully Restores health";
+    } 
+    else if(regen.equalsIgnoreCase("no")){
+      returnString+="\nCuts health in half";
+    }
+    else if(regen.equalsIgnoreCase("death")){
+      returnString+="\nSets health to zero";
+    }
+    
+    if(asleep==true){
+      returnString+="\nFalls asleep for two rounds";
+    }
+    
+    return returnString;
+  }
 }
+
 
 
