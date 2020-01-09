@@ -8,8 +8,9 @@ class Fighter{
   private double defense;
   private double speed;
   private double health;
+  private double defaultHealth;
   ArrayList<Move> moveSet = new ArrayList<Move>();
-  
+
   Fighter(String name, String type){
     this.name=name;
     this.type=type;
@@ -29,6 +30,10 @@ class Fighter{
   
   public void set_health(double health){
     this.health=health;
+  }
+  
+  public void set_defaultHealth(double defaultHealth){
+    this.defaultHealth=defaultHealth;
   }
   
   public String get_name(){
@@ -51,6 +56,11 @@ class Fighter{
     return health;
   }
   
+  public double get_defaultHealth(){
+    return defaultHealth;
+  }
+  
+  
   public String get_type(){
     return type;
   }
@@ -66,11 +76,15 @@ class Fighter{
   public String toString(){
     String returnString=" ";
     returnString="Name: " + name;
-    returnString+="\nType: " + type;
-    returnString+="\nHealth: " + health;
-    returnString+="\nAttack: " + attack;
-    returnString+="\nDefense: " + defense;
-    returnString+="\nSpeed: " + speed;
+//    returnString+="\nType: " + type;
+//    returnString+="\nHealth: " + health;
+//    returnString+="\nAttack: " + attack;
+//    returnString+="\nDefense: " + defense;
+//    returnString+="\nSpeed: " + speed;
+//    returnString+="\n" + moveSet.get(0);
+//    returnString+="\n" + moveSet.get(1);
+//    returnString+="\n" + moveSet.get(2);
+//    returnString+="\n" + moveSet.get(3);
     return returnString;
   }
 }
