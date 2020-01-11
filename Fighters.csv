@@ -1,0 +1,15 @@
+Name,Type,Attack,Defense,Speed,Health,Default Health,Move name #1,Modify Type,Modify Degree,Modify Degree 2,Regen,Asleep,Accuracy,Move name #2,Modify Type,Modify Degree,Modify Degree 2,Regen,Asleep,Accuracy,Move name #3,Modify Type,Modify Degree,Modify Degree 2,Regen,Asleep,Accuracy,Move name #4,Modify Type,Modify Degree,Modify Degree 2,Regen,Asleep,Accuracy
+Rohit Unni,Speed,160,100,185,120,120,Rock Climb,Attackspeed,1.5,3,Hi,FALSE,1,Buzzcut,Attackspeed,2,3,No,FALSE,1,Slacking,Hi,1,1,Yes,TRUE,1,Piano Flex,Attack,2,1,Hi,FALSE,1
+Jason Deng,Speed,170,95,190,140,140,Rock Climb,Attackspeed,1.5,3,Hi,FALSE,1,Vaping,Attackdefense,0.75,2,Hi,FALSE,1,Slacking,Hi,1,1,Yes,TRUE,1,Hat Toss,Hi,1,1,Hi,FALSE,1
+Sadiq Hussain,Speed,150,120,185,150,150,Tower,Attackdefense,2,2,Hi,FALSE,0.75,Block,Attack,1.25,1,Hi,FALSE,0.9,Curry Toss,Attack,1,1,No,FALSE,1,Drive,Attackspeed,2,2,Hi,FALSE,1
+Nathan Chung,Speed,175,120,190,130,130,Drive,Attackspeed,2,2,Hi,FALSE,1,Done No,Hi,1,1,Hi,FALSE,1,Cheesed,Attackdefense,2,0.5,Hi,FALSE,1,Ran Over,Attackdefense,2,2,No,TRUE,1
+Arman Shariff,Speed,175,85,195,100,100,Hug,Attack,1.5,1,Hi,FALSE,1,Sockey Kick,Hi,1,1,Hi,FALSE,0.95,Haxball,Hi,1,1,Hi,FALSE,1,Brain Boost,Attackdefense,2,0.75,Hi,FALSE,1
+Kai Xu,Brain,190,110,120,145,145,Kai Attack,Hi,1,1,Hi,FALSE,0.9,Drive,Attackspeed,2,2,Hi,FALSE,1,Hacking,Hi,1,1,Hi,FALSE,0.9,Brain Boost,Attackdefense,2,0.75,Hi,FALSE,1
+Kai Xiang Xu,Brain,160,100,185,120,120,Kai Attack,Hi,1,1,Hi,FALSE,0.9,Chopsticks,Attack,3,1,Hi,FALSE,1,Hacking,Hi,1,1,Hi,FALSE,0.9,Brain Boost,Attackdefense,2,0.75,Hi,FALSE,1
+Mahyar Tajeri,Brain,185,120,130,145,145,Brain Boost,Attackdefense,2,0.75,Hi,FALSE,0.75,Snipe,Hi,1,1,Hi,FALSE,1,Roast,Attack,3,1,Hi,FALSE,0.75,Cancel Hops,Attackspeed,4,0.6,Hi,FALSE,1
+Ethan Ham,Brain,185,175,100,130,130,Brain Boost,Attackdefense,2,0.75,Hi,FALSE,0.75,Serenade,Attack,2,1,Hi,FALSE,1,Guitar Smash,Hi,1,1,Hi,FALSE,1,Sockey Kick,Hi,1,1,Hi,FALSE,0.95
+Frank Kong,Brain,195,115,150,110,110,Brain Boost,Attackdefense,2,0.75,Hi,FALSE,0.75,Out Smart,Attackspeed,2,2,Hi,FALSE,0.75,Grab,Hi,1,1,Hi,FALSE,0.9,Haxball,Hi,1,1,Hi,FALSE,1
+Wilson Tan,Strength,170,190,120,120,120,Brawl,Hi,1,1,Hi,FALSE,1,Procrastinate,Attackspeed,0.5,2,Hi,FALSE,0.9,Grab,Hi,1,1,Hi,FALSE,0.9,Chopsticks,Attack,3,1,Hi,FALSE,1
+Sean Hua,Strength,180,185,95,180,180,MaxOut,Attack,0.75,1,Hi,FALSE,0.75,Pre Workout,Attackdefense,3,3,Hi,FALSE,1,Drive,Attackspeed,2,2,Hi,FALSE,1,Skip Legs,Attackdefense,3,0.75,Hi,FALSE,1
+Tobe,Strength,175,195,85,180,180,Hair Flick,Defense,2,1,Hi,FALSE,0.85,Arm Wrestle,Hi,1,1,Hi,FALSE,0.9,Poker Research,Attackdefense,2,0.5,Hi,FALSE,1,Confiscated,Attackdefense,2,0.4,Hi,FALSE,1
+Mr. Chu,Brain,250,120,250,200,200,Roast,Attack,3,1,Hi,FALSE,0.75,Hacking,Hi,1,1,Hi,FALSE,0.9,Out Smart,Attackspeed,2,2,Hi,FALSE,0.75,Posterize,Attack,2,1,Hi,TRUE,0.85
