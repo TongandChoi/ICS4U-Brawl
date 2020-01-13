@@ -17,4 +17,8 @@ class Team{
       System.out.println("Your team is full");
     }
   }
+  
+  public ArrayList<Fighter> get_team() {
+    return team;
+  }
 }

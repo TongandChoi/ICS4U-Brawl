@@ -10,6 +10,10 @@ class Speed extends Fighter{
     return type;
   }
   
+  public void set_name(String name) {
+    this.name = name;
+  }
+  
   public void lightShield(Fighter fighter, boolean check){
     if(fighter.get_health()>fighter.get_defaultHealth()*0.4 && check==true){
        fighter.set_defense(fighter.get_defense()*2);

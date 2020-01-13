@@ -15,6 +15,10 @@ class Fighter{
     this.name=name;
   }
   
+  public void set_name(String name) {
+    this.name = name;
+  }
+  
   public void set_attack(double attack){
     this.attack=attack;
   }

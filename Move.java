@@ -17,6 +17,20 @@ class Move{
     this.powerPoints=powerPoints;
   }
   
+  public void set_name(String name) {
+    this.name = name;
+  }
+  
+  public void set_basePower (double basePower) {
+    this.basePower = basePower;
+  }
+  
+  public void set_modifiers (boolean modifiers) {
+    this.modifiers = modifiers;
+  }
+  
+  
+  
   public void set_powerPoints(int powerPoints){
     this.powerPoints=powerPoints;
   }

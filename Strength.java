@@ -10,6 +10,10 @@ class Strength extends Fighter{
     return type;
   }
   
+  public void set_name(String name) {
+    this.name = name;
+  }
+  
   public void frenzy(Fighter fighter, boolean check){
     if(fighter.get_health()<fighter.get_defaultHealth()*0.4){
       fighter.set_attack(fighter.get_attack()*2);
