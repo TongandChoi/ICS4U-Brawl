@@ -13,6 +13,7 @@ class ICS4UBrawl{
     ArrayList<Fighter> draftBoard =newReader.fileReading(file);
     Scanner input = new Scanner(System.in);
     Fighter currFighterPlay = new Fighter("Temp");
+    Fighter currFighterPlay2 = new Fighter("Temp");
     Fighter currFighterAI = new Fighter("Temp");
     Random random = new Random();
     Scanner readerTwo = new Scanner(System.in);
@@ -217,7 +218,7 @@ class ICS4UBrawl{
     else if(mode.equalsIgnoreCase("pvp")){
       while(playerOne.get_team().size()<3 || playerTwo.get_team().size()<3){
         for(int i=0; i<draftBoard.size(); i++){
-          System.out.println("Fighter " + i + ": ");
+          System.out.println("Fighter " + (i+1) + ": ");
           System.out.println(draftBoard.get(i).get_name());
         }
         System.out.println();
@@ -228,8 +229,8 @@ class ICS4UBrawl{
           }
           System.out.println();
           System.out.println("Player Two's Team");
-          for(int i=0; i<computer.get_team().size(); i++){
-            System.out.println("Fighter " + (i+1) + ": " + computer.get_team().get(i).get_name());
+          for(int i=0; i<playerTwo.get_team().size(); i++){
+            System.out.println("Fighter " + (i+1) + ": " + playerTwo.get_team().get(i).get_name());
           }
           System.out.println();
         }
@@ -243,12 +244,14 @@ class ICS4UBrawl{
                 System.out.println("Fighter " + i + ": ");
                 System.out.println(draftBoard.get(i).get_name());
               }
+              System.out.println("Which fighter do you want on your team?");
+              answer = input.nextInt();
             }
             currFighterPlay=draftBoard.get(answer);
             playerOne.addFighter(currFighterPlay);
             draftBoard.remove(currFighterPlay);
             draftBoard.trimToSize();
-            check=true;
+            //check=true;
           }
           catch (Exception e){
             System.out.println("Invalid input. Please enter a valid input");
@@ -256,6 +259,7 @@ class ICS4UBrawl{
             input.nextLine();
             answer=4206969;
           }
+          check = true;
         }
         //check=false;
         while(check==true){
@@ -268,11 +272,11 @@ class ICS4UBrawl{
                 System.out.println(draftBoard.get(i).get_name());
               }
             }
-            currFighterAI=draftBoard.get(answer);
-            playerTwo.addFighter(currFighterAI);
-            draftBoard.remove(currFighterAI);
+            currFighterPlay2=draftBoard.get(answer);
+            playerTwo.addFighter(currFighterPlay2);
+            draftBoard.remove(currFighterPlay2);
             draftBoard.trimToSize();
-            check=false;
+            //check=false;
           }
           catch (Exception e){
             System.out.println("Invalid input. Please enter a valid input");
@@ -280,6 +284,7 @@ class ICS4UBrawl{
             input.nextLine();
             answer=4206969;
           }
+          check = false;
         }
       }
       while(playerOne.get_team().size()>0 && playerTwo.get_team().size()>0){
@@ -331,7 +336,7 @@ class ICS4UBrawl{
               System.out.println("Which fighter do you want to use?");
               fighterNum=readerTwo.nextInt();
             }
-            currFighterAI=playerTwo.get_team().get(fighterNum);
+            currFighterPlay2=playerTwo.get_team().get(fighterNum);
             check=true;
           }
           catch (Exception e){
