@@ -215,6 +215,8 @@ class ICS4UBrawl{
         System.out.println("Congratulations. You win.");
       }
     }
+    
+    //PVP mode
     else if(mode.equalsIgnoreCase("pvp")){
       while(playerOne.get_team().size()<3 || playerTwo.get_team().size()<3){
         for(int i=0; i<draftBoard.size(); i++){
@@ -234,23 +236,23 @@ class ICS4UBrawl{
           }
           System.out.println();
         }
-        boolean check=false;
-        while(check==false){
+        boolean check = false;
+        while(check == false){
           try{
-            System.out.println("Which fighter do you want on your team?");
+            System.out.println("Player One, which fighter do you want on your team?");
             answer = input.nextInt();
-            if(answer==4206969){
-              for(int i=0; i<draftBoard.size(); i++){
+            if(answer == 4206969){
+              for(int i = 0; i < draftBoard.size(); i++){
                 System.out.println("Fighter " + i + ": ");
                 System.out.println(draftBoard.get(i).get_name());
               }
               System.out.println("Which fighter do you want on your team?");
               answer = input.nextInt();
             }
-            currFighterPlay=draftBoard.get(answer);
+            currFighterPlay=draftBoard.get(answer-1);
             playerOne.addFighter(currFighterPlay);
-            draftBoard.remove(currFighterPlay);
-            draftBoard.trimToSize();
+            //draftBoard.remove(currFighterPlay);
+            //draftBoard.trimToSize();
             //check=true;
           }
           catch (Exception e){
@@ -264,7 +266,7 @@ class ICS4UBrawl{
         //check=false;
         while(check==true){
           try{
-            System.out.println("Which fighter do you want on your team?");
+            System.out.println("Player Two, which fighter do you want on your team?");
             answer = input.nextInt();
             if(answer==4206969){
               for(int i=0; i<draftBoard.size(); i++){
@@ -272,10 +274,10 @@ class ICS4UBrawl{
                 System.out.println(draftBoard.get(i).get_name());
               }
             }
-            currFighterPlay2=draftBoard.get(answer);
+            currFighterPlay2=draftBoard.get(answer-1);
             playerTwo.addFighter(currFighterPlay2);
-            draftBoard.remove(currFighterPlay2);
-            draftBoard.trimToSize();
+            //draftBoard.remove(currFighterPlay2);
+            //draftBoard.trimToSize();
             //check=false;
           }
           catch (Exception e){
@@ -286,6 +288,10 @@ class ICS4UBrawl{
           }
           check = false;
         }
+        draftBoard.remove(currFighterPlay);
+        draftBoard.trimToSize();
+        draftBoard.remove(currFighterPlay2);
+        draftBoard.trimToSize();
       }
       while(playerOne.get_team().size()>0 && playerTwo.get_team().size()>0){
         boolean check=false;
